@@ -32,7 +32,7 @@ class StegaMesh:
 
     def save(self, dest: str = ""):
         if not dest:
-            dest = f"hidden_{self.filename}"
+            dest = f"{self.filename[:-4]}_hidden.obj"
 
         for x in range(len(self.v_old)):
             self.file = self.file.replace(self.v_old[x], self.v_new[x])
